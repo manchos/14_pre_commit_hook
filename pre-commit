@@ -1,0 +1,15 @@
+#!/bin/sh
+
+echo "Starting tests..."
+`python tests.py`
+if [[ $? = 0 ]]
+then
+    echo "> Testing succesfull. Commiting changes..."
+else
+    echo "> Failed! Fix your code and run tests before commit."
+    exit 1
+fi
+
+echo "Ready to commit"
+exit 0
+
