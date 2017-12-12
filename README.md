@@ -8,7 +8,9 @@ If you need to modify the function and want to check it before each commit you c
 The commit will be done only if all tests work properly. Otherwise an error message will be shown
 
 # Usage
-The example shows that in the current form `quadratic_equation.py` does not comply with our tests and an error occur when trying to commit.
+
+## Example of broken code detection
+
 ```#!bash
 $ git commit -m "initial commit"
 .E..
@@ -29,8 +31,6 @@ FAILED (errors=1)
 > Failed! Fix your code and run tests before commit.
 
 ```
-
-## Example of broken code detection
 
 # Project Goals
 
