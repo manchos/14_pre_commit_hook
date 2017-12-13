@@ -1,15 +1,24 @@
 # Quadratic Equations Solver
 
-This program calculate roots of quadratic equation and start tests (test.py) in case commiting.
+This program calculates roots of quadratic equation and uses git hook pre-commit for autorun unit tests.
+The arguments a, b, and c are the coefficients of the equation.
+
+# Pre-commit hook
+
+Copy file pre-commit into dir .../our_project/.git/hooks
+
+check script
+
+```#!bash
+$ cp pre-commit .../our_project/.git/hooks
+$ chmod +x .../our_project/.git/hooks/pre-commit
 
 
-The get_roots function is tested.
-If you need to modify the function and want to check it before each commit you can put put pre-commit file to .git\hooks
-The commit will be done only if all tests work properly. Otherwise an error message will be shown
+```
+
+After that tests will be run automatically when you try to commit. If tests fail commit will be aborted.
 
 # Usage
-
-## Example of broken code detection
 
 ```#!bash
 $ git commit -m "initial commit"
@@ -30,6 +39,14 @@ Ran 4 tests in 0.002s
 FAILED (errors=1)
 > Failed! Fix your code and run tests before commit.
 
+```
+
+# Tests
+Module tests.py contains unit tests. You can run it by typing:
+
+```#!bash
+
+$ python tests.py
 ```
 
 # Project Goals
