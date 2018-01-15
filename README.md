@@ -9,9 +9,10 @@ Copy file pre-commit into dir .../our_project/.git/hooks
 
 check script
 
-```bash
+```#!bash
 $ cp pre-commit .../our_project/.git/hooks
 $ chmod +x .../our_project/.git/hooks/pre-commit
+
 
 ```
 
@@ -19,7 +20,7 @@ After that tests will be run automatically when you try to commit. If tests fail
 
 # Usage
 
-```bash
+```#!bash
 $ git commit -m "initial commit"
 .E..
 ======================================================================
